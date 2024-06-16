@@ -1,5 +1,5 @@
 <?php
-include_once ("tampil.php");
+include_once("tampil.php");
 include_once('koneksi.php');
 ?>
 
@@ -16,7 +16,7 @@ include_once('koneksi.php');
     <script src="library/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
-<body>  
+<body>
     <div class="container">
         <div class="container-fluid">
             <nav class="navbar navbar-inverse">
@@ -42,15 +42,13 @@ include_once('koneksi.php');
                                         <div class="control-group">
                                             <label for="npm">NAMA</label>
                                             <div class="controls">
-                                                <input type="text" name="input1"
-                                                    value="">
+                                                <input type="text" name="input1" value="">
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label for="npm">PRODI</label>
                                             <div class="controls">
-                                                <input type="text" name="input2"
-                                                    value="">
+                                                <input type="text" name="input2" value="">
                                             </div>
                                         </div>
                                         <div class="control-group">
@@ -73,6 +71,7 @@ include_once('koneksi.php');
                     <div class="block">
                         <div class="navbar navbar-inner block-header">
                             <div class="muted pull-left">Tabel Mahasiswa</div>
+                            <div class="muted pull-right"><a href="export.php" class="btn btn-primary">Ekspor ke Excel</a></div>
                         </div>
                         <div class="block-content collapse in">
                             <div class="span12">
@@ -90,7 +89,7 @@ include_once('koneksi.php');
                                     <tbody>
                                         <?php
                                         foreach ($result as $data) {
-                                            ?>
+                                        ?>
                                             <tr>
                                                 <td><?php echo $data['id']; ?></td>
                                                 <td><?php echo $data['nama_mhs']; ?></td>
@@ -100,7 +99,7 @@ include_once('koneksi.php');
                                                 <td><a href="edit.php?id=<?php echo $data['id']; ?>">EDIT</a>
                                                     | <a href="hapus.php?id=<?php echo $data['id']; ?>">HAPUS</a></td>
                                             </tr>
-                                            <?php
+                                        <?php
                                         }
                                         ?>
                                     </tbody>
